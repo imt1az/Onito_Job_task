@@ -10,8 +10,22 @@ const Form = () => {
     mobile: "",
     guardian: "",
     label: "",
+    address:"",
+    country:"",
+    age:"",
+    id_type:"",
+    govt_id:"",
+    email:"",
+    emergency:"",
+    state:"",
+    city:"",
+    pincode:"",
+    occupation:"",
+    religion:"",
+    marital:"",
+    blood:""
   };
-  const [info, setInfo] = useState(null);
+  const [info, setInfo] = useState();
   const validate = (values) => {
     let errors = {};
     if (!values.name) {
@@ -26,6 +40,52 @@ const Form = () => {
     if (!values.guardian) {
       errors.guardian = "Required";
     }
+    if (!values.address) {
+      errors.address = "Required";
+    }
+    if (!values.country) {
+      errors.address = "Required";
+    }
+    if (!values.age) {
+      errors.age = "Required";
+    }
+    if (!values.id_type) {
+      errors.id_type = "Required";
+    }
+    if (!values.govt_id) {
+      errors.govt_id = "Required";
+    }
+    if (!values.email) {
+      errors.email = "Required";
+    }
+    if (!values.emergency) {
+      errors.emergency = "Required";
+    }
+    if (!values.state) {
+      errors.state = "Required";
+    }
+    if (!values.city) {
+      errors.city = "Required";
+    }
+    if (!values.pincode) {
+      errors.pincode = "Required";
+    }
+    if (!values.occupation) {
+      errors.occupation = "Required";
+    }
+    if (!values.occupation) {
+      errors.occupation = "Required";
+    }
+    if (!values.religion) {
+      errors.religion = "Required";
+    }
+    if (!values.marital) {
+      errors.marital = "Required";
+    }
+    if (!values.blood) {
+      errors.blood = "Required";
+    }
+
 
     return errors;
   };
@@ -39,7 +99,8 @@ const Form = () => {
     // setInfo(values);
     // initialValues();
     await axios.post("http://localhost:5000/users", values).then((res) => {
-      console.log(res.data);
+     
+     setInfo(res.data)
     });
     resetForm({ values: "" });
   };
@@ -50,9 +111,11 @@ const Form = () => {
     validate,
     onSubmit,
   });
+  console.log(!info)
 
   return (
     <div>
+      
       <div className="container mx-auto mt-10">
         <h1 className="font-bold">Personal Details</h1>
         <hr></hr>
@@ -340,7 +403,7 @@ const Form = () => {
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.email}
-                          placeholder="Enter Govt id"
+                          placeholder="Email"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
                         {formik.touched.email && formik.errors.email ? (
@@ -369,7 +432,7 @@ const Form = () => {
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.emergency}
-                          placeholder="Enter Govt id"
+                          placeholder="Emergency"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
                         {formik.touched.emergency && formik.errors.emergency ? (
@@ -499,7 +562,7 @@ const Form = () => {
                           name="occupation"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
-                          value={formik.values.guardian}
+                          value={formik.values.occupation}
                           placeholder="Occupation"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
@@ -613,7 +676,18 @@ const Form = () => {
             Submit
           </button>
         </form>
-        <Users info={info}></Users>
+
+
+        
+
+          
+
+
+        <Users key={info} info={info}></Users>
+
+
+      
+       
       </div>
     </div>
   );
