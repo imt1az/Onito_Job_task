@@ -174,17 +174,17 @@ const Form = () => {
                   <div className="basis-full ml-12">
                     <input
                       type="text"
-                      id="name"
-                      name="name"
+                      id=""
+                      name="address"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      value={formik.values.name}
+                      value={formik.values.address}
                       placeholder="Enter Address"
                       className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                     />
-                    {formik.touched.name && formik.errors.name ? (
+                    {formik.touched.address && formik.errors.address ? (
                       <div className="">
-                        <p className="text-red-500">{formik.errors.name}</p>
+                        <p className="text-red-500">{formik.errors.address}</p>
                       </div>
                     ) : null}
                   </div>
@@ -199,11 +199,11 @@ const Form = () => {
                   <div className="basis-4/6 ml-12">
                     <div className="group relative">
                       <select
-                        name="label"
-                        id="label"
+                        name="country"
+                        id="country"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        value={formik.values.label}
+                        value={formik.values.country}
                         placeholder=""
                         className="text-gray-400 border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                       >
@@ -211,9 +211,9 @@ const Form = () => {
                         <option value="Bangladesh">Bangladesh</option>
                         <option value="India">India</option>
                       </select>
-                      {formik.touched.label && formik.errors.label ? (
+                      {formik.touched.country && formik.errors.country ? (
                         <div className="">
-                          <p className="text-red-500">{formik.errors.label}</p>
+                          <p className="text-red-500">{formik.errors.country}</p>
                         </div>
                       ) : null}
                     </div>
@@ -234,17 +234,17 @@ const Form = () => {
                     <div className="group relative">
                       <input
                         type="text"
-                        id="name"
-                        name="name"
+                        id="age"
+                        name="age"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        value={formik.values.name}
+                        value={formik.values.age}
                         placeholder="Age"
                         className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                       />
-                      {formik.touched.name && formik.errors.name ? (
+                      {formik.touched.age && formik.errors.age ? (
                         <div className="">
-                          <p className="text-red-500">{formik.errors.name}</p>
+                          <p className="text-red-500">{formik.errors.age}</p>
                         </div>
                       ) : null}
                     </div>
@@ -255,11 +255,11 @@ const Form = () => {
                         <h1 className="font-semibold">Sex:</h1>
                       </div>
                       <select
-                        name="label"
-                        id="label"
+                        name="sex"
+                        id="sex"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        value={formik.values.label}
+                        value={formik.values.sex}
                         placeholder=""
                         className="text-gray-400 border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                       >
@@ -267,9 +267,9 @@ const Form = () => {
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                       </select>
-                      {formik.touched.label && formik.errors.label ? (
+                      {formik.touched.sex && formik.errors.sex ? (
                         <div className=" diis">
-                          <p className="text-red-500">{formik.errors.label}</p>
+                          <p className="text-red-500">{formik.errors.sex}</p>
                         </div>
                       ) : null}
                     </div>
@@ -298,9 +298,9 @@ const Form = () => {
                         <option value="Passport">Passport</option>
                         <option value="National Id">National Id</option>
                       </select>
-                      {formik.touched.label && formik.errors.label ? (
+                      {formik.touched.id_type && formik.errors.id_type ? (
                         <div className="">
-                          <p className="text-red-500">{formik.errors.label}</p>
+                          <p className="text-red-500">{formik.errors.id_type}</p>
                         </div>
                       ) : null}
                     </div>
@@ -311,13 +311,13 @@ const Form = () => {
                       name="govt_id"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      value={formik.values.guardian}
+                      value={formik.values.govt_id}
                       placeholder="Enter Govt id"
                       className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                     />
-                    {formik.touched.guardian && formik.errors.guardian ? (
+                    {formik.touched.govt_id && formik.errors.govt_id ? (
                       <div className="">
-                        <p className="text-red-500">{formik.errors.guardian}</p>
+                        <p className="text-red-500">{formik.errors.govt_id}</p>
                       </div>
                     ) : null}
                   </div>
@@ -335,18 +335,18 @@ const Form = () => {
                       </div>
                       <div className="ml-11 w-full">
                         <input
-                          type="text"
-                          name="govt_id"
+                          type="email"
+                          name="email"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
-                          value={formik.values.guardian}
+                          value={formik.values.email}
                           placeholder="Enter Govt id"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
-                        {formik.touched.guardian && formik.errors.guardian ? (
+                        {formik.touched.email && formik.errors.email ? (
                           <div className="">
                             <p className="text-red-500">
-                              {formik.errors.guardian}
+                              {formik.errors.email}
                             </p>
                           </div>
                         ) : null}
@@ -365,17 +365,17 @@ const Form = () => {
                       <div className="">
                         <input
                           type="text"
-                          name="govt_id"
+                          name="emergency"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
-                          value={formik.values.guardian}
+                          value={formik.values.emergency}
                           placeholder="Enter Govt id"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
-                        {formik.touched.guardian && formik.errors.guardian ? (
+                        {formik.touched.emergency && formik.errors.emergency ? (
                           <div className="">
                             <p className="text-red-500">
-                              {formik.errors.guardian}
+                              {formik.errors.emergency}
                             </p>
                           </div>
                         ) : null}
@@ -397,17 +397,17 @@ const Form = () => {
                       <div className="ml-11 w-full">
                         <input
                           type="text"
-                          name="govt_id"
+                          name="state"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
-                          value={formik.values.guardian}
+                          value={formik.values.state}
                           placeholder="State"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
-                        {formik.touched.guardian && formik.errors.guardian ? (
+                        {formik.touched.state && formik.errors.state ? (
                           <div className="">
                             <p className="text-red-500">
-                              {formik.errors.guardian}
+                              {formik.errors.state}
                             </p>
                           </div>
                         ) : null}
@@ -424,17 +424,17 @@ const Form = () => {
                       <div className="ml-11 w-full">
                         <input
                           type="text"
-                          name="govt_id"
+                          name="city"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
-                          value={formik.values.guardian}
+                          value={formik.values.city}
                           placeholder="City"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
-                        {formik.touched.guardian && formik.errors.guardian ? (
+                        {formik.touched.city && formik.errors.city ? (
                           <div className="">
                             <p className="text-red-500">
-                              {formik.errors.guardian}
+                              {formik.errors.city}
                             </p>
                           </div>
                         ) : null}
@@ -456,17 +456,17 @@ const Form = () => {
                       <div className="ml-11 w-full">
                         <input
                           type="text"
-                          name="govt_id"
+                          name="pincode"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
-                          value={formik.values.guardian}
+                          value={formik.values.pincode}
                           placeholder="State"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
-                        {formik.touched.guardian && formik.errors.guardian ? (
+                        {formik.touched.pincode && formik.errors.pincode ? (
                           <div className="">
                             <p className="text-red-500">
-                              {formik.errors.guardian}
+                              {formik.errors.pincode}
                             </p>
                           </div>
                         ) : null}
@@ -496,17 +496,17 @@ const Form = () => {
                       <div className="ml-11 w-full">
                         <input
                           type="text"
-                          name="govt_id"
+                          name="occupation"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.guardian}
                           placeholder="Occupation"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
-                        {formik.touched.guardian && formik.errors.guardian ? (
+                        {formik.touched.occupation && formik.errors.occupation ? (
                           <div className="">
                             <p className="text-red-500">
-                              {formik.errors.guardian}
+                              {formik.errors.occupation}
                             </p>
                           </div>
                         ) : null}
@@ -522,11 +522,11 @@ const Form = () => {
                       </div>
                       <div className="ml-11 w-full">
                       <select
-                        name="id_type"
-                        id="id_type"
+                        name="religion"
+                        id="religion"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        value={formik.values.id_type}
+                        value={formik.values.religion}
                         placeholder=""
                         className="text-gray-400 border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                       >
@@ -534,9 +534,9 @@ const Form = () => {
                         <option value="Islam">Islam</option>
                         <option value="Hinduism">Hinduism</option>
                       </select>
-                      {formik.touched.label && formik.errors.label ? (
+                      {formik.touched.religion && formik.errors.religion ? (
                         <div className="">
-                          <p className="text-red-500">{formik.errors.label}</p>
+                          <p className="text-red-500">{formik.errors.religion}</p>
                         </div>
                       ) : null}
                       </div>
@@ -555,17 +555,17 @@ const Form = () => {
                       <div className="ml-11 w-full">
                         <input
                           type="text"
-                          name="govt_id"
+                          name="marital"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
-                          value={formik.values.guardian}
+                          value={formik.values.marital}
                           placeholder="Marital Status"
                           className="border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                         />
-                        {formik.touched.guardian && formik.errors.guardian ? (
+                        {formik.touched.marital && formik.errors.marital ? (
                           <div className="">
                             <p className="text-red-500">
-                              {formik.errors.guardian}
+                              {formik.errors.marital}
                             </p>
                           </div>
                         ) : null}
@@ -581,11 +581,11 @@ const Form = () => {
                       </div>
                       <div className="ml-11 w-full">
                       <select
-                        name="id_type"
-                        id="id_type"
+                        name="blood"
+                        id="blood"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        value={formik.values.id_type}
+                        value={formik.values.blood}
                         placeholder=""
                         className="text-gray-400 border border-red-300 border-1 rounded-md   w-full border-gray-200 px-3 py-1.5 focus:outline-none border-gray-300"
                       >
@@ -593,9 +593,9 @@ const Form = () => {
                         <option value="A+">A+</option>
                         <option value="B+">B+</option>
                       </select>
-                      {formik.touched.label && formik.errors.label ? (
+                      {formik.touched.blood && formik.errors.blood ? (
                         <div className="">
-                          <p className="text-red-500">{formik.errors.label}</p>
+                          <p className="text-red-500">{formik.errors.blood}</p>
                         </div>
                       ) : null}
                       </div>
