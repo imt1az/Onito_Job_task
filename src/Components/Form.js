@@ -98,7 +98,7 @@ const Form = () => {
   const onSubmit = async (values, { resetForm }) => {
     // setInfo(values);
     // initialValues();
-    await axios.post("http://localhost:5000/users", values).then((res) => {
+    await axios.post("https://infinite-beach-03225.herokuapp.com/users", values).then((res) => {
      
      setInfo(res.data)
     });

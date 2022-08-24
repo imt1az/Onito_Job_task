@@ -10,7 +10,7 @@ const Users = ( ) => {
   //  console.log(data ? data : '')
 
   useEffect(() => {
-    axios.get("http://localhost:5000/users").then((res) => {
+    axios.get("https://infinite-beach-03225.herokuapp.com/users").then((res) => {
       const { data } = res;
       setUsers(data);
     });
